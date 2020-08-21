@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>exp的h5日记——使用CSS继续自定义自己的网页</title>
+	<<link rel="stylesheet" href=".\cs.css" type="text/css">
+</head>
+<!--&lt=< &gt=>-->
+<body>
+	<h1>exp的h5日记——使用CSS继续自定义自己的网页(上)</h1>
+	<a href="https://zhuanlan.zhihu.com/p/149678579"><去知乎康康</a>
+	<h2>一、使用CSS改变文字大小</h2>
+		<p>我们改变字体大小可以用&lth1&gt-&lth6&gt标签，但是我们有些时候需要特别大的字，怎么办呢？这时我们就要用到传说中的CSS</p>
+		<p>来，我们现在head里添加style标签，代码如下</p>
+		<pre class="code">
+&lthead&gt
+	&ltmeta charset="utf-8"&gt
+	&lttitle&gthtml文档&lt/title&gt
+	&ltstyle&gt
+		
+	&lt/style&gt
+&lt/head&gt
+		</pre>
+		<p>CSS代码就写在style标签里</p>
+		<p>好，回归正题，如何调整字体大小呢？</p>
+		<p>在CSS中，可以使用"font-size"属性改变字体大小</p>
+		<p>我们先找到想要DIY的字，添加一个class</p>
+		<pre class="code">
+&ltp class="diy"&gt这才够大&lt/p&gt
+		</pre>
+		<p>然后在style标签里添加如下代码</p>
+		<pre class="code">
+.diy{
+	font-size:x;
+}
+		</pre>
+		<p>这里的x代表字体大小，单位是em(倍)或px(像素)</p>
+		<p>一般情况下，1em=16px，这个数值随父元素变化</p>
+		<p>所以，我们想让指定字体的大小达到普通字体的5倍，就需要...</p>
+		<pre class="code">
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+	&ltmeta charset="utf-8"&gt
+	&lttitle&gthtml.document&lt/title&gt
+	&ltstyle&gt
+		.diy{
+			font-size:5em;
+		}
+	&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+	&ltp class="diy"&gt大大大大大！&lt/p&gt
+&lt/body&gt
+&lt/html&gt
+		</pre>
+		<p>结果如下</p>
+		<div class="preview">
+			<p style="font-size:5em">大大大大大！</p>
+		</div>
+		<hr>
+	<h2>二、用CSS改变文字颜色</h2>
+		<p>在CSS中，改变字体颜色的属性是"color"</p>
+		<p>而color属性的值可以是...</p>
+		<p>好吧，一共有7种，我只说最常用的两种好了，HEX和RGB</p>
+		<p>HEX的格式是color:#66CCFF或#6CF</p>
+		<p>RGE的格式是color:rgb(102,204,255)</p>
+		<p>这两种都可以，但我个人比较喜欢HEX(十六进制)</p>
+		<p>扯了这么多，那怎样改变文字的颜色呢？比如把一串文字改成天依蓝？</p>
+		<p>首先，我们要确保那句话已经加上了class="diy"</p>
+		<p>然后，我们在CSS中添加</p>
+		<pre class="code">
+color:#66CCFF;
+		</pre>
+		<p>结果是这样</p>
+		<div class="preview">
+			<p style="color:#66CCFF">我是天依蓝！66CCFF！</p>
+		</div>
+		<p>PS:天依蓝的16进制色值是#66CCFF</p>
+	<h2>三、用CSS改变字体</h2>
+		<p>一般来说，网页的字体是由浏览器的默认字体决定的</p>
+		<p>但是有的人就不乐意了，他说："我喜欢微软雅黑，但浏览器的默认字体却是宋体，难不成还要换浏览器？"</p>
+		<p>我对那个人说，"恭喜你，猜错了，字体是可以通过'font-family属性'自定义的"</p>
+		<p>呃...虽然我刚才在演戏，但是可以通过css改字体却不假，我们在css里加入</p>
+		<pre class="code">
+.diy{
+	font-family:Microsoft YaHei;
+}
+		</pre>
+		<p>字体就会变成微软雅黑(Microsoft YaHei是微软雅黑的英文)</p>
+		<p>为了突出效果，我把微软雅黑改成微软雅黑Light，再演示</p>
+		<p>代码↓</p>
+		<pre class="code">
+&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+	&ltmeta charset="utf-8"&gt
+	&lttitle&gthtml.document&lt/title&gt
+	&ltstyle&gt
+		.diy{
+			font-family:Microsoft YaHei Light;
+		}
+	&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+	&ltp class="diy"&gt我是微软雅黑Light字体&lt/p&gt
+&lt/body&gt
+&lt/html&gt
+		</pre>
+		<p>结果↓</p>
+		<div class="preview">
+			<p style="font-family:Microsoft YaHei Light">我是微软雅黑Light字体</p>
+		</div>
+</body>
+</html>

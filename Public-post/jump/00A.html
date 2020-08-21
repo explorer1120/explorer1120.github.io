@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>跳转ing&gt_&lt</title>
+</head>
+<body>
+	<script>
+		var jump = GetQueryString(go);
+		window.location.href = "../" + jump;
+		 function GetQueryString(name){
+    	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    	var r = window.location.search.substr(1).match(reg);
+    	if(r!=null)return  unescape(r[2]); return location.href="404.html";
+	}
+	</script>
+</body>
+</html>

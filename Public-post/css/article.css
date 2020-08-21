@@ -1,0 +1,36 @@
+body
+{
+    width: 1000px;
+    margin: auto;
+
+    color: #555;
+}
+h1,
+h2,
+h3
+{
+    color: #000;
+}
+#title
+{
+    text-shadow: 5px 5px 5px #ddd;
+}
+.code
+{
+    font-family: Courier New,cascadia code,consolas,微软雅黑,NSIMSUN,新宋体;
+    font-size: 16px;
+
+    color: #fff;
+    background-color: rgb(97,97,97);
+}
+.preview
+{
+    font-family: Consolas,微软雅黑,NSIMSUN,新宋体;
+    font-size: 16px;
+
+    color: #fff;
+    background-color: rgb(97,97,97);
+}
+a{
+    color:#0000FF;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>你好</title> 
+<style>
+	body #up{background-color:#66CCFF;font-family:微软雅黑; }
+  body a{text-decoration:none;}
+  #up ul li a{color:#333333;text-decoration:none;font-size:1.2em;padding:5px;font-family:Microsoft YaHei Light,微软雅黑Light;height:19.2px;}
+  #up ul li{display:inline-block;list-style:none;}
+  #up ul li a:hover{background-color:#66FFCC;display:block;font-size:1.2em;font-family:Microsoft YaHei,微软雅黑;cursor:pointer;}
+  #friendly{background-color:#999999;font-size:15px;font-family:Microsoft YaHei Light,微软雅黑Light,Microsoft YaHei,微软雅黑,华文细黑,sans-serif;}
+  #friendly ul li a{color:#000000;}
+  #up ul{text-align:right;}
+  .line{width:320px;height:2px;display:inline-block;vertical-align:6px;background-color:#ff1111;}
+  #hi {text-align:center;}
+  input, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+	<div id="up">
+    	<ul>
+     		<li><a href="./post/index.html">所有博客</a></li>
+     		<li><a href="./2333/index.html">exp娱乐节目</a></li>
+     		<li><a href="https://xiaozhu2007.github.io/home.html">聊天室</a></li>
+       		<li><a href="#link">推荐的网站</a></li>
+        	<li><a href="pingtai.html">跨平台</a></li>
+       		<li><a href="vip.html">打赏</a></li>
+        	<li><a href="mailto:explorer1120@163.com" title="向我发送电子邮件(我不会介意)">去反馈</a></li>
+        	<li><a href="language.html">选择语言</a></li>
+        	<li><a onclick="jump();">个人主页</a></li>
+    	</ul>
+    </div>
+    <h1 id="username"></h1>
+    <p>今天是 <script>var d = new Date();document.write(d.getFullYear() + "年" +(d.getMonth() + 1) + "月" + d.getDate() + "日");document.write(' 星期'+'日一二三四五六'.charAt(new Date().getDay()));</script></p>
+	<hr>
+    <form action="./jump/00A.html">
+    	<label for="jump">跳转地址(如要跳转到explorer1120.github.io/post/index.html，请输入post/index.html)</label>
+    	<input type="text" name="go" id="go">
+    	<input type="submit" value="跳转">
+    </form>
+  <!-- **************************** -->
+  <script>
+  	function go(url){
+   		window.location.href = "./go/00A.html?url=" + url;
+   	}
+   	function jump(){
+			window.location.href="./user/"+name+".html";
+	}
+  	var wocao = 
+  	["SYSTEM",
+  	"explorer1120",
+  	"xiaozhu2007"];
+/*  	var pw = [
+  	"NOPASSWORD",
+  	"Tt123456",
+  	""]*/
+  	var flag = 0;
+//  	var i = 0;
+    function GetQueryString(name){
+    	var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    	var r = window.location.search.substr(1).match(reg);
+    	if(r!=null)return  unescape(r[2]); return location.href="404.html";
+	}
+	var name=GetQueryString("n");
+	var pass=GetQueryString("p");
+    if(name !=null){
+		document.getElementById("username").innerHTML = "你好," + name
+ 		document.title = '你好，' + name
+    }
+    for(var tmp=0;tmp<wocao.length;tmp=tmp+1){
+    	if(wocao[tmp] == name){
+    		flag = 1;//i = tmp;
+    	}
+    }
+    if(flag != 1){
+    	window.location.href = "404.html";
+    }
+/*    if(pass == pw[i]){
+    	window.location.href = "index.html";
+    }*/
+</script>
+</body>
+</html>

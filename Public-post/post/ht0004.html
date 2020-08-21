@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>exp的h5日记——利用tag(标签)进行基础的文本编辑</title>
+	<link rel="stylesheet" href=".\cs.css" type="text/css">
+</head>
+<!--&lt=< &gt=>-->
+<body>
+	<h1>exp的h5日记——利用tag(标签)进行基础的文本编辑</h1>
+	<p><a href="https://zhuanlan.zhihu.com/p/149602227"><去知乎康康</a></p>
+	<h2>一、使用&ltp&gt标签显示文字</h2>
+		<h3>定义</h3>
+		<p>&ltp&gt标签用于定义段落。</p>
+		<p>p元素会自动在其前后创建一些空白。浏览器会自动添加</p>
+		<p>说白了，就是插入一段文字，并自动换行</p>
+		<h3>语法</h3>
+		<p>p标签的语法十分简单</p>
+		<pre class="code">
+&ltp&gt这是段落&lt/p&gt
+&ltp&gt这也是段落&lt/p&gt
+		</pre>
+		<div class="preview">
+			<p>这是段落</p>
+			<p>这也是段落</p>
+		</div>
+		<br>
+	<h2>二、使用HTML中的标签定义样式</h2>
+		<p>标签们，出来冒个泡！</p>
+		<pre class="code">
+&ltb&gt/&ltstrong&gt      加粗
+&lti&gt/&ltem&gt          斜体
+&ltu&gt               下划线
+&lts&gt               划掉
+&ltsub&gt             下标
+&ltsup&gt             上标
+		</pre>
+		<p>我们看看这些标签都有什么用，代码如下</p>
+		<pre class="code">
+&ltp&gt&ltb&gt加粗&lt/b&gt&lt/p&gt
+&ltp&gt&lti&gt斜体&lt/i&gt&lt/p&gt
+&ltp&gt&ltstrong&gt加粗强调&lt/strong&gt&lt/p&gt
+&ltp&gt&ltem&gt斜体强调&lt/em&gt&lt/p&gt
+&ltp&gt&ltu&gt下划线&lt/u&gt&lt/p&gt
+&ltp&gt&lts&gt划掉&lt/s&gt&lt/p&gt
+&ltp&gt&ltsub&gt下标&lt/sub&gt和&ltsup&gt上标&lt/sup&gt&lt/p&gt
+		</pre>
+		<p>效果如下</p>
+		<div class="preview">
+			<p><b>加粗</b></p>
+			<p><i>斜体</i></p>
+			<p><strong>加粗强调</strong></p>
+			<p><em>斜体强调</em></p>
+			<p><u>下划线</u></p>
+			<p><s>划掉</s></p>
+			<p><sub>下标</sub>和<sup>上标</sup></p>
+		</div>
+	<h2>三、使用&ltpre&gt标签保留所有格式</h2>
+		<p>&ltpre&gt标签可以保留所有格式(包括空格、换行、缩进等)，而且字体会自动变成等宽字体，感觉像为代码而生的hh</p>
+		<p>比如用&ltpre&gt标签显示一串代码，就是这样的</p>
+		<pre>
+#include &ltbits/stdc++.h&gt
+using namespace std;
+int main(){
+	cout<<"Hello world!";
+	return 0;
+}
+		</pre>
+		<p>相信我，我真的没加CSS，我只是把<替换成lt，>替换成gt，否则显示不了(gt和lt前都有&)</p>
+	<h3>想要自定义更多内容，请听下回分解</h3>
+</body>
+</html>
